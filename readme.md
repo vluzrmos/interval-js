@@ -61,6 +61,12 @@ Interval.test(-2, interval);
 
 Interval.test(2, interval);
 // false
+
+Interval.test(0, interval);
+// true
+
+Interval.test(1, interval);
+// true
 ```
 
 
