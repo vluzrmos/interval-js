@@ -1,4 +1,4 @@
-# Math Interval
+# Math Interval JS
 
 [![Join the chat at https://gitter.im/vluzrmos/interval-js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vluzrmos/interval-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -26,46 +26,38 @@ Bower:
 Simple: 
 
 ```js
-var interval = "[1,2]";
-
-Interval.test(1, interval);
+Interval.test(1, "[1,2]");
 // true
 
-Interval.test(3, interval);
+Interval.test(3, "[1,2]");
 // false
 ```
 
 Set of numbers:
 
 ```js
-var interval = "{1,3,5,7}";
-
-Interval.test(2, interval);
+Interval.test(2, "{1,3,5,7}");
 // false
 
-Interval.test(3, interval);
+Interval.test(3, "{1,3,5,7}");
 // true
 ```
 
 Infinity:
 
 ```js
-var interval = "[1, Inf)";
-
-Interval.test(-2, interval);
+Interval.test(-2, "[1, Inf)");
 // false
 
-Interval.test(400, interval);
+Interval.test(400, "[1, Inf)");
 // true
 ```
 
 ```js
-var interval = "(-Inf, Inf)";
-
-Interval.test(-2, interval);
+Interval.test(-2, "(-Inf, Inf)");
 // true
 
-Interval.test(1000, interval);
+Interval.test(1000, "(-Inf, Inf)");
 // true
 ```
 
@@ -73,30 +65,28 @@ Interval.test(1000, interval);
 Simple excluded:
 
 ```js
-var interval = "(-2, 2)";
-
-Interval.test(-2, interval);
+Interval.test(-2, "(-2, 2)");
 // false
 
-Interval.test(2, interval);
+Interval.test(2, "(-2, 2)");
 // false
 
-Interval.test(0, interval);
+Interval.test(0, "(-2, 2)");
 // true
 
-Interval.test(1, interval);
+Interval.test(1, "(-2, 2)");
 // true
 ```
 
 # Importing
 
-On nodejs:
+NodeJS:
 
 ```js
 var Interval = require('math-interval-js');
 ```
 
-On you html files:
+Html:
 
 ```html
 <script src="/path/to/that/package/src/interval.js"></script>
