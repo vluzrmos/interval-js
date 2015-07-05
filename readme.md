@@ -4,7 +4,7 @@ Check if a given number match with a math interval.
 
 # Install 
 
-You just download the source [tarball](https://github.com/vluzrmos/interval-js/archive/master.zip).
+You just download the source [zip](https://github.com/vluzrmos/interval-js/archive/master.zip).
 
 Or if you want: `npm install math-interval-js`.
 
@@ -80,12 +80,12 @@ Interval.test(1, interval);
 On nodejs:
 
 ```js
-var Interval = require('math-interval-js')`;
+var Interval = require('math-interval-js');
 ```
 
 On you html files:
 
 ```html
-<script src="path/to/that/package/src/interval.js"></script>
+<script src="/path/to/that/package/src/interval.js"></script>
 ```
 
