@@ -10,7 +10,7 @@
         module.exports = new (factory())();
     } else {
         // Browser global support.
-        root.Lang = new (factory())();
+        root.Interval = new (factory())();
     }
 
 }(this, function () {

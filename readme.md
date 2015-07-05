@@ -2,6 +2,12 @@
 
 Check if a given number match with a math interval.
 
+# Install 
+
+You just download the source [tarball](https://github.com/vluzrmos/interval-js/archive/master.zip).
+
+Or if you want: `npm install math-interval-js`.
+
 # Usage
 
 Simple: 
@@ -69,5 +75,17 @@ Interval.test(1, interval);
 // true
 ```
 
+# Importing
 
+On nodejs:
+
+```js
+var Interval = require('math-interval-js')`;
+```
+
+On you html files:
+
+```html
+<script src="path/to/that/package/src/interval.js"></script>
+```
 
