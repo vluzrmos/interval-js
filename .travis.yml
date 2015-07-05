@@ -6,3 +6,4 @@ node_js:
 
 before_script:
   - travis_retry npm install -g
+  - travis_retry npm install
