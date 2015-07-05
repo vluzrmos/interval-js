@@ -6,7 +6,16 @@ Check if a given number match with a math interval.
 
 You just download the source [zip](https://github.com/vluzrmos/interval-js/archive/master.zip).
 
-Or if you want: `npm install math-interval-js`.
+Or if you want:
+
+NPM:
+
+`npm install math-interval-js`.
+
+Bower:
+
+`bower install math-interval-js`.
+
 
 # Usage
 
