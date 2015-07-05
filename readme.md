@@ -12,7 +12,7 @@ You just download the source [zip](https://github.com/vluzrmos/interval-js/archi
 
 Or if you want:
 
-[NPM]https://www.npmjs.com/package/math-interval-js):
+[NPM](https://www.npmjs.com/package/math-interval-js):
 
 `npm install math-interval-js`.
 
