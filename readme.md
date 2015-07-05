@@ -1,4 +1,4 @@
-# Interval
+# Math Interval
 
 Check if a given number match with a math interval.
 
