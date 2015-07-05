@@ -2,6 +2,8 @@
 
 [![Join the chat at https://gitter.im/vluzrmos/interval-js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vluzrmos/interval-js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+[![Build Status](https://travis-ci.org/vluzrmos/interval-js.svg)](https://travis-ci.org/vluzrmos/interval-js)
+
 Check if a given number match with a math interval.
 
 # Install 
