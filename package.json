@@ -4,7 +4,8 @@
   "description": "A simple math interval matcher.",
   "main": "src/interval.js",
   "scripts": {
-    "test": "jasmine-node ./spec/"
+    "test": "jasmine-node spec/",
+    "minify": "node_modules/.bin/uglifyjs src/interval.js -o src/interval.min.js --source-map=src/interval.min.js.map -c -m"
   },
   "repository": {
     "type": "git",
@@ -12,12 +13,14 @@
   },
   "keywords": [
     "Interval",
-    "Math",
-    "Interval"
+    "Math"
   ],
   "author": "Vagner do Carmo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/vluzrmos/interval-js/issues"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.23"
   }
 }
