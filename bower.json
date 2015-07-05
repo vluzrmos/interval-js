@@ -1,0 +1,22 @@
+{
+  "name": "math-interval-js",
+  "version": "0.0.2",
+  "homepage": "https://github.com/vluzrmos/interval-js",
+  "authors": [
+    "Vagner do Carmo <vluzrmos@gmail.com>"
+  ],
+  "description": "An utilitary to test math interval.",
+  "main": "src/interval.js",
+  "keywords": [
+    "Math",
+    "Interval"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
