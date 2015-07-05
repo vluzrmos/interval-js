@@ -4,7 +4,7 @@
   "description": "A simple math interval matcher.",
   "main": "src/interval.js",
   "scripts": {
-    "test": "./node_modules/jasmine-node/bin/jasmine-node ./spec/"
+    "test": "jasmine-node ./spec/"
   },
   "repository": {
     "type": "git",
