@@ -36,30 +36,77 @@
      * Test if a given number is in the interval.
      * @param {Number} value
      * @param {String} interval
-     * @returns {boolean}
+     * @returns {Boolean}
      */
     Interval.prototype.test = function (value, interval) {
         var numbers = this.parseNumbersFromInterval(interval);
 
-        if (interval.match(Interval.types.setOfNumbers)) {
+        if (this.isSetOfNumbers(interval)) {
             return numbers.indexOf(value) != -1;
         }
 
-        if (interval.match(Interval.types.bothInclusive)) {
+        if (this.isBothInclusive(interval)) {
             return value >= numbers[0] && value <= numbers[1];
         }
 
-        if (interval.match(Interval.types.bothExclusive)) {
+        if (this.isBothExclusive(interval)) {
             return value > numbers[0] && value < numbers[1];
         }
 
-        if (interval.match(Interval.types.rightInclusive)) {
+        if (this.isRightInclusive(interval)) {
             return value > numbers[0] && value <= numbers[1];
         }
 
-        if (interval.match(Interval.types.leftInclusive)) {
+        if (this.isLeftInclusive(interval)) {
             return value >= numbers[0] && value < numbers[1];
         }
+
+        return false;
+    };
+
+    /**
+     * Check if a given interval is set of numbers.
+     * @param {String} interval
+     * @return {Boolean}
+     */
+    Interval.prototype.isSetOfNumbers = function (interval) {
+        return Interval.types.setOfNumbers.test(interval)
+    };
+
+    /**
+     * Check if a given interval is both side exclusive.
+     * @param {String} interval
+     * @return {Boolean}
+     */
+    Interval.prototype.isBothExclusive = function (interval) {
+        return Interval.types.bothExclusive.test(interval);
+    };
+
+    /**
+     * Check if a given interval is both side inclusive.
+     * @param {String} interval
+     * @return {Boolean}
+     */
+    Interval.prototype.isBothInclusive = function (interval) {
+        return Interval.types.bothInclusive.test(interval);
+    };
+
+    /**
+     * Check if a given interval is left side inclusive.
+     * @param {String} interval
+     * @return {Boolean}
+     */
+    Interval.prototype.isLeftInclusive = function (interval) {
+        return Interval.types.leftInclusive.test(interval);
+    };
+
+    /**
+     * Check if a given interval is right side inclusive.
+     * @param {String} interval
+     * @return {Boolean}
+     */
+    Interval.prototype.isRightInclusive = function (interval) {
+        return Interval.types.rightInclusive.test(interval);
     };
 
     /**
@@ -68,7 +115,7 @@
      * @returns {Number}
      */
     Interval.prototype.parseNumber = function (str) {
-        str = (str+'').replace(/Inf\s*?$/i, 'Infinity');
+        str = (str + '').replace(/Inf\s*?$/i, 'Infinity');
 
         return Number(str);
     };
