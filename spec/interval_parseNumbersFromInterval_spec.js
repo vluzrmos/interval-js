@@ -11,6 +11,8 @@ describe('Testing Interval.parseNumbersFromInterval', function () {
         expect(Interval.parseNumbersFromInterval(")1,2(")).toEqual([1, 2]);
         expect(Interval.parseNumbersFromInterval("]1,2[")).toEqual([1, 2]);
         expect(Interval.parseNumbersFromInterval("]1,2)")).toEqual([1, 2]);
+        expect(Interval.parseNumbersFromInterval("]1   ,   2)")).toEqual([1, 2]);
+        expect(Interval.parseNumbersFromInterval("    ]   1   ,   2)   ")).toEqual([1, 2]);
     });
 
     it('Should be an Array and contains Infinity.', function() {
@@ -20,6 +22,6 @@ describe('Testing Interval.parseNumbersFromInterval', function () {
         expect(Interval.parseNumbersFromInterval("(1, Infinity)")).toEqual([1, Infinity]);
         expect(Interval.parseNumbersFromInterval(")1,Inf(")).toEqual([1, Infinity]);
         expect(Interval.parseNumbersFromInterval("]-Infinity,Inf[")).toEqual([-Infinity, Infinity]);
-        expect(Interval.parseNumbersFromInterval("]1,Infinity)")).toEqual([1, Infinity]);
+        expect(Interval.parseNumbersFromInterval("]   1   ,   Infinity  )")).toEqual([1, Infinity]);
     })
 });

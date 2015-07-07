@@ -25,11 +25,11 @@
     };
 
     Interval.types = {
-        'setOfNumbers': /^\{.*\}$/,
-        'bothExclusive': /^(\(|\]|\)).*(\)|\[|\()$/,
-        'bothInclusive': /^\[.*\]$/,
-        'leftInclusive': /^\[.*(\)|\[|\()$/,
-        'rightInclusive': /^(\(|\]|\)).*\]$/
+        'setOfNumbers': /^\s*\{.*\}\s*$/,
+        'bothExclusive': /^\s*(\(|\]|\)).*(\)|\[|\()\s*$/,
+        'bothInclusive': /^\s*\[.*\]\s*$/,
+        'leftInclusive': /^\s*\[.*(\)|\[|\()\s*$/,
+        'rightInclusive': /^\s*(\(|\]|\)).*\]\s*$/
     };
 
     /**
@@ -126,8 +126,8 @@
      * @returns {Array}
      */
     Interval.prototype.parseNumbersFromInterval = function (interval) {
-        var braces = /\[|\]|\{|\}|\(|\)/g;
-        var numbers = interval.replace(braces, '').split(/,\s?/);
+        var braces = /\[|\]|\{|\}|\(|\)|\s*/g;
+        var numbers = interval.replace(braces, '').split(/,/);
         var self = this;
 
         return numbers.map(function (str) {
