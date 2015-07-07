@@ -5,57 +5,8 @@
     <title>Math Interval JS</title>
 
     <script src="src/interval.min.js"></script>
-    
-    <style>
-        .success {
-            background-color: green;
-        }
-        .error {
-            background-color: red;
-        }
-    </style>
-    
-    <!-- Helpers -->
-    <script>
-        /**
-         * Write on document replacing braces on str with props on obj.
-         * @param  {String} str
-         * @param  {Object} object
-         * @return {undefined}
-         */
-        function write(str, object){
-            str = replaceProps(str, object);
 
-            document.write(str);
-        }
-
-        /**
-         * Replace braces on str with props on obj.
-         * @param  {String} str
-         * @param  {Object} obj
-         * @return {String}
-         */
-        function replaceProps(str, obj)
-        {
-            for(var prop in obj)
-            {
-                str = str.replace(new RegExp("\{\s*"+prop+"\s*\}", "ig"), obj[prop]);
-            }
-
-            return str;
-        }
-
-
-
-        if (!Date.now) {
-            /**
-             * Returns the actual timestamp in milliseconds.
-             * @return {Integer}
-             */
-            Date.now = function () { return new Date().getTime(); }
-        }
-    </script>
-
+    <script src="JSLitmus.js"></script>
     <!-- Usage with some timing test -->
     <script>
         var specs = [
@@ -75,40 +26,11 @@
             { interval: '{1, 2, 3, 4}', test: 5, expect: false }
         ];
 
-        var timing = 0;
-
         for (var i in specs) {
-            var start = Date.now();
-
-            var result = Interval.test(specs[i].test, specs[i].interval);
-
-            var end  = Date.now();
-
-            // Time wasted.
-            timing += (end-start);
-
-            var color = (result==specs[i].expect ? "success" : "error");
-
-            write(
-                'Asserting if the <b>{test}</b> is in the interval <b>{interval}</b>.<br/>',
-                specs[i]
-            );
-
-            write(
-                'Expecting: <b>{expect}</b>.<br/>',
-                specs[i]
-            );
-
-            write(
-                '<span class=\'{color}\'>Result: <b>{result}</b>.</span>',
-                {color:color, result:result}
-            );
-
-            write('<br/> <br/>', undefined);
+            JSLitmus.test(specs[i].test+" in "+specs[i].interval, function() {
+                Interval.test(specs[i].test, specs[i].interval);
+            });
         }
-
-        //In my tests it was always between 0 and 2 ms.
-        document.write("Total Time: "+timing+" ms.");
     </script>
 </head>
 <body>
