@@ -16,10 +16,13 @@ Or if you want:
 
 `npm install math-interval-js`.
 
-Bower:
+[Bower](http://bower.io/search/?q=math%20interval):
 
 `bower install math-interval-js`.
 
+[Composer](https://packagist.org/packages/vluzrmos/math-interval-js):
+
+`composer require vluzrmos/math-interval-js`.
 
 # Usage
 
