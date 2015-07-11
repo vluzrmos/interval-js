@@ -5,7 +5,7 @@
   "authors": [
     "Vagner do Carmo <vluzrmos@gmail.com>"
   ],
-  "description": "An utilitary to test math interval.",
+  "description": "A simple math interval matcher.",
   "main": "src/interval.js",
   "keywords": [
     "Math",
